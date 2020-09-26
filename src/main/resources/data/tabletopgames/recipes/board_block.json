@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "##",
+    "XX"
+  ],
+  "key":
+  {
+    "#":
+    {
+      "item": "minecraft:white_wool"
+    },
+    "X":
+    {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "result":
+  {
+    "item": "tabletopgames:board_block",
+    "count": 1
+  }
+}

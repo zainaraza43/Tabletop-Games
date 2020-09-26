@@ -9,9 +9,9 @@ import net.minecraftforge.common.ToolType;
 public class BoardBlock extends Block {
     public BoardBlock() {
         super(AbstractBlock.Properties.create(Material.CAKE)
-                .hardnessAndResistance(2.0f,2.0f)
+                .hardnessAndResistance(1.2f,1.0f)
                 .sound(SoundType.WOOD)
-                .harvestLevel(0)
-                .harvestTool(ToolType.AXE));
+                .harvestTool(ToolType.AXE)
+                .harvestLevel(1));
     }
 }
