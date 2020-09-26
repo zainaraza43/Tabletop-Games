@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "tabletopgames:block/board_block" }
+  }
+}

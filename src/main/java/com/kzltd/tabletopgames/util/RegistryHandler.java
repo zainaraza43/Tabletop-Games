@@ -1,9 +1,11 @@
 package com.kzltd.tabletopgames.util;
 
 import com.kzltd.tabletopgames.TabletopGames;
+import com.kzltd.tabletopgames.blocks.BlockItemBase;
 import com.kzltd.tabletopgames.blocks.BoardBlock;
 import com.kzltd.tabletopgames.items.ItemBase;
 import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -27,5 +29,6 @@ public class RegistryHandler {
     public static final RegistryObject<Block> BOARD_BLOCK = BLOCKS.register("board_block", BoardBlock::new);
 
     // Block Items
+    public static final RegistryObject<Item> BOARD_BLOCK_ITEM = ITEMS.register("board_block", () -> new BlockItemBase(BOARD_BLOCK.get()));
 
 }
