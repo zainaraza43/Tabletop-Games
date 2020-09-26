@@ -1,5 +1,5 @@
 # Tabletop-Games
-BorderHacks Project by Kumail and Zain Raza
+BorderHacks Project by Kumail and Zain Raza.
 
 ## Current to-do list:
 - Create textures
@@ -7,4 +7,5 @@ BorderHacks Project by Kumail and Zain Raza
 - Create "combat" GUI (the game playing GUI)
   - Multiplayer?
 - Implement UNO functionality
-- Implement other board games
+- 
+- Implement other board games?
