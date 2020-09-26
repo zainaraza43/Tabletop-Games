@@ -12,6 +12,17 @@ import net.minecraftforge.common.ToolType;
 public class TableBlock extends Block {
 
     private static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+    
+    private static final VoxelShape SHAPE_N = Stream.of(
+    Block.makeCuboidShape(0, 14, 0, 16, 16, 16),
+    Block.makeCuboidShape(7, 5, 7, 9, 14, 9),
+    Block.makeCuboidShape(4, 0, 4, 12, 1, 12),
+    Block.makeCuboidShape(6, 1, 6, 10, 5, 10),
+    Block.makeCuboidShape(7, 2, 5, 9, 4, 11),
+    Block.makeCuboidShape(5, 2, 7, 11, 4, 9),
+    Block.makeCuboidShape(7, 1, 4, 9, 2, 12),
+    Block.makeCuboidShape(4, 1, 7, 12, 2, 9)
+    ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
 
     public TableBlock() {
         super(AbstractBlock.Properties.create(Material.WOOD)
