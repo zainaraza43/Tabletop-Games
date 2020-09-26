@@ -22,7 +22,7 @@ public class TableBlock extends Block {
     Block.makeCuboidShape(5, 2, 7, 11, 4, 9),
     Block.makeCuboidShape(7, 1, 4, 9, 2, 12),
     Block.makeCuboidShape(4, 1, 7, 12, 2, 9)
-    ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
+    ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get(); //default to north shape, although if more states are added the code can by modified
 
     public TableBlock() {
         super(AbstractBlock.Properties.create(Material.WOOD)
@@ -35,6 +35,11 @@ public class TableBlock extends Block {
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
+    }
+    
+    @Override
+    public VoxelShape getShape(Blockstate state, IBlockReader worldIn, BlockPos pos, ISelectContext context){
+        return SHAPE_N;
     }
 
     @Override
@@ -51,5 +56,9 @@ public class TableBlock extends Block {
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
-
+    
+    @Override
+    public float getAmbientOcclusionLightValue(BlockState state, IBlockReader worldIn, BlockPos pos){
+        return 0.3f;
+    }
 }
