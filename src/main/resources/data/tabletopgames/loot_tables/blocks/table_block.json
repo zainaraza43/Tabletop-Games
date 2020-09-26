@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tabletopgames:board_block"
+          "name": "tabletopgames:table_block"
         }
       ]
     }
