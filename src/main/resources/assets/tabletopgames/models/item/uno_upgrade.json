@@ -1,6 +1,64 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tabletopgames:items/uno_upgrade"
-  }
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "tabletopgames:items/uno_card",
+		"particle": "tabletopgames:items/uno_card"
+	},
+	"elements": [
+		{
+			"from": [-1, 3, 1],
+			"to": [19, 5, 29],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 12, 9]},
+			"faces": {
+				"north": {"uv": [5, 1, 10, 1.5], "texture": "#0"},
+				"east": {"uv": [5, 0, 12, 0.5], "texture": "#0"},
+				"south": {"uv": [5, 1.5, 10, 2], "texture": "#0"},
+				"west": {"uv": [5, 0.5, 12, 1], "texture": "#0"},
+				"up": {"uv": [5, 7, 0, 0], "texture": "#0"},
+				"down": {"uv": [10, 5, 5, 12], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-103, 0, 0],
+			"translation": [-0.25, 0.25, -0.5],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-98, 0, 0],
+			"translation": [0.25, -0.75, 0],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"firstperson_righthand": {
+			"rotation": [35, -180, 0],
+			"translation": [0.75, 1, 0],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-116, 0, 0],
+			"translation": [-0.25, 0.75, 0],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"ground": {
+			"translation": [0, -1.5, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [-91, 0, 0],
+			"translation": [-0.75, -3.5, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"head": {
+			"rotation": [-88, 0, 0],
+			"translation": [-3.5, 28.75, -10.5],
+			"scale": [3, 3, 3]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, -3.25, -2.75],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
 }
